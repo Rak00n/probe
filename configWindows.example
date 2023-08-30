@@ -1,0 +1,22 @@
+{
+    "UUID":"1",
+    "Host":"NAS-PC",
+    "Secret":"keyToCipherPackages",
+    "RelayTo":"telegram",
+    "ListenAddress":"127.0.0.1:49854",
+    "TelegramBotKey":"0000000000:00000000000000000000000000000000000",
+    "Jobs":[
+        {
+            "JobType":"diskMinSpace",
+            "JobData":"{\"Folder\":\"C:\",\"DiskThreshold\":\"5%\"}"
+        },
+        {
+            "JobType":"diskMinSpace",
+            "JobData":"{\"Folder\":\"C:\",\"DiskThreshold\":\"50G\"}"
+        },
+        {
+            "JobType":"raidStatus"
+        }
+    ]
+}
+
