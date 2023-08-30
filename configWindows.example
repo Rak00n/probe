@@ -5,6 +5,7 @@
     "RelayTo":"telegram",
     "ListenAddress":"127.0.0.1:49854",
     "TelegramBotKey":"0000000000:00000000000000000000000000000000000",
+    "TelegramUserID":"000000000",
     "Jobs":[
         {
             "JobType":"diskMinSpace",
