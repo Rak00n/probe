@@ -26,3 +26,10 @@ Configuration file is in JSON format.
 - TelegramUserID - Your Telegram User ID. You can get it via third-party services on the Internet or by starting the probe with "TelegramUserID":"000000000" and sending "/getmyid" command into the bot.
 - Jobs - Scheduled tasks. Each task must be described as embedded JSON. See example configuration files.
  
+### Build
+
+Windows Probe
+`$ GOOS=windows go build -o probe.exe`
+
+Linux Probe
+`$ GOOS=linux go build -o probe`
