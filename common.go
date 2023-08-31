@@ -109,6 +109,8 @@ func getKeyAndIV(secret string) (string, string) {
 func sendData(data string) {
 	if relayTo == "telegram" {
 		sendDataToTelegram(data)
+	} else if relayTo == "probe" {
+		sendDataOverTCP(data)
 	} else {
 		sendDataOverTCP(data)
 	}

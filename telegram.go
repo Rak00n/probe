@@ -27,13 +27,17 @@ func runTelegramAPI() {
 			msg := tgbotapi.NewMessage(update.Message.Chat.ID, update.Message.Text)
 			switch update.Message.Command() {
 			case "help":
-				msg.Text = "This bot can help you monitor your infrastructure and get notifications in your telegram. First of all you must requst new probe with \"/newprobe\". Get your probes data with \"/status\""
+				msg.Text = "This bot can help you monitor your infrastructure and get notifications in your telegram. First of all you must requst new probe with \"/newprobe\". Get your probes data with \"/status\". Get your Telegram ID with \"/getmyid\""
+			case "start":
+				msg.Text = "This bot can help you monitor your infrastructure and get notifications in your telegram. First of all you must requst new probe with \"/newprobe\". Get your probes data with \"/status\". Get your Telegram ID with \"/getmyid\""
 			case "newprobe":
 				uuidWithHyphen := uuid.New()
 				uuidString := uuidWithHyphen.String()
 				msg.Text = "New probe ID: " + uuidString
 			case "status":
 				msg.Text = "Your probes data"
+			case "getmyid":
+				msg.Text = "Your ID: " + string(update.Message.Chat.ID)
 			default:
 				msg.Text = "Unknown command. Try \"/help\""
 			}
