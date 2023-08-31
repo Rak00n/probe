@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"strconv"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 	"github.com/google/uuid"
@@ -37,7 +38,7 @@ func runTelegramAPI() {
 			case "status":
 				msg.Text = "Your probes data"
 			case "getmyid":
-				msg.Text = "Your ID: " + string(update.Message.Chat.ID)
+				msg.Text = "Your ID: " + strconv.Itoa(int(update.Message.Chat.ID))
 			default:
 				msg.Text = "Unknown command. Try \"/help\""
 			}
